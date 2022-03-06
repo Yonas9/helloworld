@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="9318ca86-613f-462f-ba57-fb2803d46646" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="hellowgitFlow" doc:id="2da7e852-7516-487e-a810-3ca94c87e8d3" >
+		<http:listener doc:name="Listener" doc:id="68ddeeef-cf8d-4525-a40c-e0264648527f" />
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="7b3c74e7-5df8-4c9d-b4e3-d551a2dc6180" />
+	</flow>
+</mule>
